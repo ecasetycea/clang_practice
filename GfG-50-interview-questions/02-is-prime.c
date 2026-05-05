@@ -7,7 +7,6 @@ bool isNumberString(char* string);
 bool isPrime(int number);
 
 int main(int argc, char* argv[]) {
-
     int number;
 
     // Check for given number at the start
@@ -28,13 +27,11 @@ int main(int argc, char* argv[]) {
 
         // Pass input to program for calculation
         number = atoi(argv[1]);
-
     } else {
 
         // Take input from user if no number provided
         printf("Please enter a number: ");
         scanf("%d", &number);
-
     }
 
     // Print result
@@ -43,7 +40,6 @@ int main(int argc, char* argv[]) {
     } else {
         printf("Number %d is NOT prime!\n", number);
     }
-
     return 0;
 }
 
@@ -56,14 +52,14 @@ bool isNumberString(char* string) {
 }
 
 bool isPrime(int number) {
+
     // Biggest unique divisor gives the number when squared
     int maxTested = (int) sqrt( number );
 
     // For most cases naivelly testing all numbers is faster than explicit prime
-    // tests which most likely include factorials
+    // tests, which most likely include factorials
     for(int i=2; i<maxTested+1; i++) {
         if(number%i == 0) return false;
     }
-
     return true;
 }
