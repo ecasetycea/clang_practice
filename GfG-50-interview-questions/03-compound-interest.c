@@ -34,6 +34,7 @@ typedef struct interestData {
 } interestData_t;
 
 
+/* ========== FORWARD DECLARATIONS ========== */
 enum numberValidity isStringDouble(char* string);
 enum numberValidity isStringNumber(char* string);
 void printErrorMessage(enum numberValidity STATUS, enum dataType ARG);
@@ -41,6 +42,8 @@ void getDataFromUser(interestData_t* idptr);
 void printResults(interestData_t* idptr);
 
 
+
+/* ========== PROGRAM ENTRY ========== */
 int main(int argc, char* argv[]) {
     interestData_t id = {0.0, 0.0, 0};
 
